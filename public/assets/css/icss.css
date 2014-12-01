@@ -1,0 +1,210 @@
+/* RESET CSS */
+.container-fluid {
+  padding: 0;
+}
+
+.navbar-inverse {
+  background-color: #1DD011;
+  border-color: #0EDD19;
+}
+
+#wapper {
+  background-color: #f3f2f3;
+}
+
+#header {
+  background-color: #9B3F90;
+}
+
+#banner{
+  height: 400px;
+}
+
+/* MENU BANNER CSS ==============================================================================*/
+#banner #imenu{
+  overflow: visible;
+  z-index: 10;
+}
+#banner #imenu a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+#banner #imenu .level-1>li{
+  background-color: #1DD011;
+  line-height: 3em;
+  padding-left: 1em;
+  border-bottom: 1px solid #eeeeee;
+  position: relative;
+  z-index: 11;
+}
+#banner #imenu .level-1>li:hover{
+  background-color: rgba(29, 208, 17, 0.80);
+}
+#banner #imenu .level-2{
+  display: none;
+  position: relative;
+}
+#banner #imenu .level-1>li:hover .level-2>li{
+  border-bottom: 1px solid #eeeeee;
+  line-height: 2em;
+  padding-left: 2em;
+
+}
+#banner #imenu .level-1>li:hover .level-2>li>a{
+  text-transform: none;
+  font-size: 1em;
+}
+#banner #imenu .level-1>li:hover .level-2{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 12;
+  background-color: rgba(29, 208, 17, 0.90);
+  /*background-color: #0783E7;*/
+  width: 40em;
+  border-top: 2px solid #eeeeee;
+  min-height: 21em;
+  padding-right: 30em;
+}
+
+
+#banner #imenu .level-1>li:hover .level-2 .sample{
+  display: none;
+}
+#banner #imenu .level-1>li:hover .level-2>li:hover>a{
+  color: yellow;
+}
+#banner #imenu .level-1>li:hover .level-2>li:hover .sample{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 27%;
+}
+
+
+
+
+
+/* MENUFOOD ======================================================*/
+#menu-food{
+  background-color: #6e6b68;
+  padding: 2em;
+}
+
+.box:hover .box-container div{
+  background-color: #000000;
+}
+.box{
+  color: #ffffff;
+  text-align: center;
+  height: 8em;
+}
+.box h3{
+  text-transform: uppercase;
+  font-size: 2em;
+  padding: 1em;
+  padding-bottom: 0;
+  margin: 0;
+  font-weight: 900;
+}
+
+.box span{
+  text-transform: uppercase;
+  font-size: 1em;
+  margin: 0;
+}
+
+
+.box1 {
+  height: 8em;
+  background-color: #fe8802;
+  border: 2px solid #fe8802;
+  border-radius: 5px;
+}
+
+.box2 {
+  height: 8em;
+  background-color: #f9e604;
+  border: 2px solid #f9e604;
+  border-radius: 5px;
+}
+
+.box3 {
+  height: 8em;
+  background-color: #8ed435;
+  border: 2px solid #8ed435;
+  border-radius: 5px;
+}
+
+/* BIG-BOX =========================================*/
+
+.big-box .box-title {
+  background-color: #1DD011;
+  line-height: 2.5em;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 350;
+}
+.item-wrapper {
+  padding: 0.1em;
+  color: #ffffff;
+}
+
+ .item {
+  border: 2px solid #eeeeee;
+  background-color: #9B3F90;
+  min-height: 10em;
+  padding: 0.4em;
+}
+ .item img{
+  padding: 0;
+}
+
+ .item h3 {
+  margin: 0;
+}
+
+ .item:hover {
+  border: 2px solid #555555;
+}
+
+/* MENU SIDEBAR */
+#sidebar {
+  margin: 0;
+  padding: 0;
+}
+
+#sidebar #imenu .level-1>li {
+  background-color: #1DD011;
+}
+
+#sidebar #imenu .level-1>li>a {
+  line-height: 1.7em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-left: 1em;
+  font-size: 1.2em;
+  color: white;
+}
+
+#sidebar #imenu .level-2>li {
+  line-height: 1.4em;
+  background-color: #f9e604;
+}
+
+#sidebar #imenu .level-2>li>a {
+  line-height: 1.4em;
+  font-size: 1.2em;
+  text-decoration: none;
+  padding-left: 2em;
+  color: white;
+}
+
+#sidebar #imenu .level-2>li>a:hover {
+  color: blue;
+}

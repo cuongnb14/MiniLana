@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost/minilana',
+	'url' => 'http://localhost/minilana/',
 
 	/*
 	|--------------------------------------------------------------------------

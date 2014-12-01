@@ -18,17 +18,10 @@
 
 Route::get('/', array('as' => 'home', 'uses' => 'PublicHomeController@getIndex'));
 
-Route::get('/hello',function(){
-    echo "hello";
-});
+Route::get('/default/slide',array('as' => 'slide', function(){
+    return View::make("layout.public.slide");
+}));
 
-Route::group(array('prefix' => 'admin'), function()
-{
+Route::group(array('prefix' => 'public'), function(){
     Route::controller('home','PublicHomeController');
-    
-    Route::get('hello',function(){
-        echo "hello";
-    });
-   
-
 });

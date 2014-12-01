@@ -1,0 +1,64 @@
+
+
+#menu-ver>ul>li{
+	background-color: #c3c3c3;
+	line-height: 40px;
+	padding: 5px;
+	text-transform: uppercase;
+	position: relative;
+}
+
+#menu-ver>ul>li:hover{
+	background-color: yellow;
+}
+
+#menu-ver>ul>li>div{
+	display: none;
+}
+#menu-ver>ul>li:hover>div>ul{
+	float: left;
+	width: 300px;
+}
+
+#menu-ver>ul>li:hover>div{
+	width: 300px;
+	background-color: blue;
+	position: absolute;
+	left: 300px;
+	top: 0px;
+	display: inline;
+}
+
+#menu-ver>ul>li:hover>div>ul{
+	position: relative;
+}
+
+#menu-ver>ul>li:hover>div .food{
+	display: none;
+}
+
+#menu-ver>ul>li:hover>div li:hover .food{
+	display: block;
+	position: absolute;
+	left: 260px;
+	top: 0px;
+
+}
+
+.clearfix:after {
+  content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden; 
+}
+.clearfix { 
+  display: inline-block;  
+}
+* html .clearfix {  
+  height: 1%;  
+} /* Hides from IE-mac \*/
+.clearfix {  
+  display: block;  
+}
+

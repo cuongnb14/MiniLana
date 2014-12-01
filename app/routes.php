@@ -11,7 +11,24 @@
 |
 */
 
-Route::get('/', function()
+// Route::get('/', function()
+// {
+// 	return View::make('hello');
+// });
+
+Route::get('/', array('as' => 'home', 'uses' => 'PublicHomeController@getIndex'));
+
+Route::get('/hello',function(){
+    echo "hello";
+});
+
+Route::group(array('prefix' => 'admin'), function()
 {
-	return View::make('hello');
+    Route::controller('home','PublicHomeController');
+    
+    Route::get('hello',function(){
+        echo "hello";
+    });
+   
+
 });

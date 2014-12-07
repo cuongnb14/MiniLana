@@ -18,7 +18,7 @@
 
 Route::get('/', array('as' => 'home', 'uses' => 'PublicHomeController@getIndex'));
 
-Route::get('/default/slide',array('as' => 'slide', function(){
+Route::get('/public/slide',array('as' => 'slide', function(){
     return View::make("layout.public.slide");
 }));
 

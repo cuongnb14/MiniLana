@@ -148,7 +148,7 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 
-.pulse {
+.pulse, .box:hover .box-container {
   -webkit-animation-name: pulse;
           animation-name: pulse;
 }
@@ -701,7 +701,7 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 
-.bounceInLeft, #imenu .level-1>li:hover .level-2 {
+.bounceInLeft {
   -webkit-animation-name: bounceInLeft;
           animation-name: bounceInLeft;
 }
@@ -1722,7 +1722,7 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 
-.flipInX, .box:hover .box-container {
+.flipInX {
   -webkit-backface-visibility: visible !important;
           backface-visibility: visible !important;
   -webkit-animation-name: flipInX;

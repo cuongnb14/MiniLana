@@ -4,26 +4,32 @@
 }
 
 .navbar-inverse {
-  background-color: #1DD011;
-  border-color: #0EDD19;
+  /*background-color: purple;*/
+  background-image: url('../images/bg-purple.jpg');
+  border:none;
+  border-bottom: 0.5em solid #412A57;
+  margin: 0;
 }
 
 #wapper {
-  background-color: #f3f2f3;
+  /*background-color: #f0f0f0;*/
+  background-color: #e0e0e0;
+  min-height: 1000px;
 }
 
 #header {
-  background-color: #9B3F90;
+
 }
 
 #banner{
-  height: 400px;
+ 
 }
 
 /* MENU BANNER CSS ==============================================================================*/
 #banner #imenu{
   overflow: visible;
   z-index: 10;
+  padding-right: 0;
 }
 #banner #imenu a{
   text-decoration: none;
@@ -32,16 +38,20 @@
   color: #ffffff;
 }
 
+#banner #imenu .level-1{
+   position: relative;
+}
+
 #banner #imenu .level-1>li{
-  background-color: #1DD011;
+  /*background-color: #3fb618;*/
+  background-image: url('../images/bg-purple.jpg');
   line-height: 3em;
   padding-left: 1em;
   border-bottom: 1px solid #eeeeee;
-  position: relative;
   z-index: 11;
 }
 #banner #imenu .level-1>li:hover{
-  background-color: rgba(29, 208, 17, 0.80);
+  background-image: url('../images/bg-green.jpg');
 }
 #banner #imenu .level-2{
   display: none;
@@ -63,35 +73,43 @@
   top: 0;
   left: 100%;
   z-index: 12;
-  background-color: rgba(29, 208, 17, 0.90);
-  /*background-color: #0783E7;*/
+  border-left: 0.3em solid #412A57;
+  background-image: url('../images/bg-purple.jpg');
+  opacity: 0.95;
   width: 40em;
-  border-top: 2px solid #eeeeee;
   min-height: 21em;
   padding-right: 30em;
 }
 
 
-#banner #imenu .level-1>li:hover .level-2 .sample{
+#banner #imenu .level-1 .level-2 .sample{
   display: none;
+  position: absolute;
+  z-index: 13;
+  top: 0;
+  left: 27%;
+
 }
 #banner #imenu .level-1>li:hover .level-2>li:hover>a{
   color: yellow;
 }
-#banner #imenu .level-1>li:hover .level-2>li:hover .sample{
+#banner #imenu .level-1 .level-2>li:hover .sample{
   display: block;
-  position: absolute;
-  top: 0;
-  left: 27%;
 }
 
+#banner #slide{
+  padding-left: 0;
+}
 
-
+#banner #slide iframe{
+  margin: 0!important;
+}
 
 
 /* MENUFOOD ======================================================*/
 #menu-food{
-  background-color: #6e6b68;
+  /*background-color: #323433;*/
+  background-image: url('../images/bg-blue.jpg');
   padding: 2em;
 }
 
@@ -102,6 +120,7 @@
   color: #ffffff;
   text-align: center;
   height: 8em;
+  cursor: pointer;
 }
 .box h3{
   text-transform: uppercase;
@@ -135,29 +154,50 @@
 
 .box3 {
   height: 8em;
-  background-color: #8ed435;
+  /*background-color: #8ed435;*/
+  background-image: url('../images/bg-green.jpg');
   border: 2px solid #8ed435;
   border-radius: 5px;
 }
 
+.box3:hover {
+  /*background-color: #111111;*/
+  background-image: url('../images/bg-purple.jpg');
+}
+
+
 /* BIG-BOX =========================================*/
 
 .big-box .box-title {
-  background-color: #1DD011;
-  line-height: 2.5em;
+  /*background-color: #3fb618;*/
+  background: url('../images/bg-purple.jpg');
+  line-height: 2em;
   margin: 0;
   text-transform: uppercase;
   text-align: center;
   font-weight: 350;
+  border-top: 2px solid #0393E3;
 }
+
+.big-box .box-title-sm {
+
+  background-image: url('../images/bg-green.jpg');
+  line-height: 1.5em;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  font-weight: normal;
+}
+
 .item-wrapper {
   padding: 0.1em;
   color: #ffffff;
 }
 
  .item {
-  border: 2px solid #eeeeee;
-  background-color: #9B3F90;
+  border: 0.2em solid #eeeeee;
+  background-image: url('../images/bg-blue.jpg');
   min-height: 10em;
   padding: 0.4em;
 }
@@ -170,7 +210,11 @@
 }
 
  .item:hover {
-  border: 2px solid #555555;
+  border: 0.2em solid #555555;
+}
+
+.big-box .box-body {
+
 }
 
 /* MENU SIDEBAR */
@@ -178,13 +222,17 @@
   margin: 0;
   padding: 0;
 }
+#sidebar #imenu{
+  margin: 0;
+  padding: 0;
+}
 
 #sidebar #imenu .level-1>li {
-  background-color: #1DD011;
+  background-image: url('../images/bg-green.jpg');
 }
 
 #sidebar #imenu .level-1>li>a {
-  line-height: 1.7em;
+  line-height: 2em;
   text-transform: uppercase;
   text-decoration: none;
   padding-left: 1em;
@@ -193,12 +241,13 @@
 }
 
 #sidebar #imenu .level-2>li {
-  line-height: 1.4em;
-  background-color: #f9e604;
+  line-height: 1.7em;
+  background-image: url('../images/bg-blue.jpg');
+  border-bottom: 1px solid #ffffff;
 }
 
 #sidebar #imenu .level-2>li>a {
-  line-height: 1.4em;
+  line-height: 1.6em;
   font-size: 1.2em;
   text-decoration: none;
   padding-left: 2em;
@@ -208,3 +257,102 @@
 #sidebar #imenu .level-2>li>a:hover {
   color: blue;
 }
+/*MAIN CONTENT*/
+#main-content {
+  padding-right: 0;
+}
+
+/* FOOTER */
+#footer {
+  border-top: 5px solid #aaaaaa;
+  background-color: #222222;
+  min-height: 15em;
+  color: #eeeeee;
+}
+
+/* CONTENT-DETAILS*/
+#wapper-details {
+  /*background-color: #9B3F90;*/
+  background-image: url('../images/bg-blue.jpg');
+  background-color: #2588D9;
+  background-repeat: repeat-x;
+  color: #ffffff;
+  font-size: 1.1em;
+}
+
+#wapper-details #content{
+  padding-right: 3em;
+  padding-left: 3em;
+  margin-top: 1em;
+}
+
+#wapper-details .name{
+  margin-top: 0;
+  color: #1FEF29;
+}
+
+#food-thumnail {
+  padding-left: 2em;
+}
+
+#tip {
+  padding-left: 1em;
+}
+
+#tip h3{
+  color: #1FEF29;
+}
+
+.tab-content {
+  padding-left: 1.5em;
+}
+
+#food-info {
+  padding-left: 1em;
+}
+
+.nav-tabs li.active a{
+  /*background-color: #3fb618;*/
+  background-image: url('../images/bg-purple.jpg');
+  color: #ffffff;
+
+}
+
+.nav-tabs li.active a:focus{
+  /*background-color: #3fb618;*/
+  background-image: url('../images/bg-purple.jpg');
+   color: #ffffff;
+}
+
+.nav-tabs li.active:hover a{
+  background-color: #3fb618;
+  background-image: url('../images/bg-purple.jpg');
+   color: #ffffff;
+}
+.nav-tabs li:hover a{
+  background-color: #3fb618;
+  background-image: url('../images/bg-purple.jpg');
+}
+
+.nav-tabs a{
+  color: #eeeeee;
+  font-size: 1.2em;
+}
+
+.tab-pane ul li {
+  line-height: 3em;
+}
+
+/* CONFIG ANIMATION*/
+.sample {
+  -webkit-animation-duration: 500ms;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+}
+
+.level-2 {
+  -webkit-animation-duration: 500ms;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+}
+

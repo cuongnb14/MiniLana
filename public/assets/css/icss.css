@@ -271,28 +271,37 @@
 }
 
 /* CONTENT-DETAILS*/
-#wapper-details {
-  /*background-color: #9B3F90;*/
+#content-details {
   background-image: url('../images/bg-blue.jpg');
   background-color: #2588D9;
+  min-height: 1000px;
   background-repeat: repeat-x;
   color: #ffffff;
   font-size: 1.1em;
-}
-
-#wapper-details #content{
   padding-right: 3em;
   padding-left: 3em;
-  margin-top: 1em;
+  padding-top: 1em;
 }
 
-#wapper-details .name{
-  margin-top: 0;
-  color: #1FEF29;
+#content{
+
+}
+
+#content-details #name{
+  margin-top: 0em;
+  color: #310732;
 }
 
 #food-thumnail {
   padding-left: 2em;
+}
+
+#meta-data{
+  padding: 0;
+}
+
+#meta-data th{
+  background-image: url('../images/bg-purple.jpg');
 }
 
 #tip {
@@ -300,7 +309,7 @@
 }
 
 #tip h3{
-  color: #1FEF29;
+  color: #310732;
 }
 
 .tab-content {

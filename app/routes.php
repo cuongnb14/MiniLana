@@ -25,3 +25,40 @@ Route::get('/public/slide',array('as' => 'slide', function(){
 Route::group(array('prefix' => 'public'), function(){
     Route::controller('home','PublicHomeController');
 });
+
+Route::group(array('prefix' => 'food'), function(){
+    Route::get('/detail',array('as'=>'detail', 'uses' => 'PublicFoodController@getDetail'));
+});
+
+ Route::get('/clawler',function(){
+
+ 	function GetImageFromUrl($link){
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_POST, 0);
+		curl_setopt($ch,CURLOPT_URL,$link);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		$result=curl_exec($ch);
+		curl_close($ch);
+		return $result;
+	}
+
+	$foods = Food::all()->toArray();
+	// echo '<pre>';
+	// print_r($foods);
+	// echo '</pre>';
+	$i = 0;
+	foreach ($foods as $food) {
+
+		$contents=GetImageFromUrl($food['url_image']);
+		$savefile = fopen('public/assets/datastore/images_food/f-'.$food['id'].'.jpg', 'w');
+		fwrite($savefile, $contents);
+		fclose($savefile);
+		$i++;
+		echo '<br />Done: '.$i;
+	}
+
+	
+	echo "Done";
+
+
+ });

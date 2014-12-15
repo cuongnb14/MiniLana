@@ -27,10 +27,14 @@ Route::group(array('prefix' => 'public'), function(){
 });
 
 Route::group(array('prefix' => 'food'), function(){
-    Route::get('/detail',array('as'=>'detail', 'uses' => 'PublicFoodController@getDetail'));
+    Route::get('/detail/{id?}/{name?}',array('as'=>'detail', 'uses' => 'PublicFoodController@getDetail'));
+    Route::get('/list/{idCategory?}',array('as'=>'list', 'uses' => 'PublicFoodController@getList'));
 });
 
- Route::get('/clawler',function(){
+/**
+ *  clwaler food images. (only one time).
+ */
+Route::get('/clawler',function(){
 
  	function GetImageFromUrl($link){
 		$ch = curl_init();
@@ -43,9 +47,6 @@ Route::group(array('prefix' => 'food'), function(){
 	}
 
 	$foods = Food::all()->toArray();
-	// echo '<pre>';
-	// print_r($foods);
-	// echo '</pre>';
 	$i = 0;
 	foreach ($foods as $food) {
 
@@ -56,9 +57,5 @@ Route::group(array('prefix' => 'food'), function(){
 		$i++;
 		echo '<br />Done: '.$i;
 	}
-
-	
 	echo "Done";
-
-
- });
+});

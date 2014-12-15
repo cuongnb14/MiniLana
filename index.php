@@ -46,4 +46,11 @@ $app = require_once __DIR__.'/bootstrap/start.php';
 |
 */
 
+function debug($variable){
+    echo '<pre style="background-color: #eeeeee; padding: 1em;">';
+    print_r($variable);
+    echo '</pre>';
+}
+
+
 $app->run();

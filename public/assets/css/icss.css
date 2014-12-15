@@ -195,6 +195,10 @@
   color: #ffffff;
 }
 
+.item-wrapper:hover {
+  color: #ffffff;
+}
+
  .item {
   border: 0.2em solid #eeeeee;
   background-image: url('../images/bg-blue.jpg');

@@ -30,7 +30,7 @@
 							<div class="col-md-8">
 								<h3>{{$food->name}}</h3>
 								
-								<span>{{$food->name}}</span>
+								<span>{{$food->description}}</span>
 							</div>
 							
 						</div>

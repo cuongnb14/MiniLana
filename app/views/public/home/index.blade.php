@@ -3,9 +3,11 @@
     <div id="banner" class="container-fluid">
 				<div id="imenu" class="col-md-4 animated fadeInLeftBig">
 					<ul class="list-unstyled level-1 ">
-						<li><a href="#"><i class="fa fa-list"></i> Theo cách chế biến</a>
+					   @foreach($categories as $category)
+						<li><a href="#"><i class="fa fa-list"></i> {{$category->name}}</a>
 							<ul class="list-unstyled level-2 animated zoomIn">
-								<li><a href="#">Giỏi cuốn</a>
+							      @foreach($category->sub as $sub)
+								<li><a href="{{URL::route('list',$sub->id)}}" >{{$sub->name}}</a>
 									<div class="sample animated zoomIn">
 										<div class="item-wrapper">
 											<div class="item container-fluid">
@@ -31,101 +33,9 @@
 											</div>
 										</div>
 									</div></li>
-
-								<li><a href="#">Trộn Salat</a>
-									<div class="sample animated zoomIn">
-										<div class="item-wrapper">
-											<div class="item container-fluid">
-												<img src="{{asset('public/assets/datastore/images_food/food.jpg')}}" width="100%" height="100%"
-													class="col-md-4">
-												<div class="col-md-8">
-													<h3>Ten mon</h3>
-													<span>Mo ta</span>
-												</div>
-
-											</div>
-										</div>
-
-										<div class="item-wrapper">
-											<div class="item container-fluid">
-												<img src="{{asset('public/assets/datastore/images_food/food.jpg')}}" width="100%" height="100%"
-													class="col-md-4">
-												<div class="col-md-8">
-													<h3>Ten mon</h3>
-													<span>Mo ta</span>
-												</div>
-
-											</div>
-										</div>
-									</div></li>
-								<li><a href="#">Kho</a>
-									<div class="sample animated zoomIn">
-										<div class="item-wrapper">
-											<div class="item container-fluid">
-												<img src="{{asset('public/assets/datastore/images_food/food.jpg')}}" width="100%" height="100%"
-													class="col-md-4">
-												<div class="col-md-8">
-													<h3>Ten mon</h3>
-													<span>Mo ta</span>
-												</div>
-
-											</div>
-										</div>
-
-										<div class="item-wrapper">
-											<div class="item container-fluid">
-												<img src="{{asset('public/assets/datastore/images_food/food.jpg')}}" width="100%" height="100%"
-													class="col-md-4">
-												<div class="col-md-8">
-													<h3>Ten mon</h3>
-													<span>Mo ta</span>
-												</div>
-
-											</div>
-										</div>
-									</div></li>
+									 @endforeach
 							</ul></li>
-
-						<li><a href="#"><i class="fa fa-list"></i> Theo nguyên liệu</a>
-							<ul class="list-unstyled level-2 animated zoomIn">
-								<li><a href="#">Mon Vip</a>
-									<div class="sample">
-										<img width="150em" height="150em" src="images/sample-2.jpg">
-									</div></li>
-
-								<li><a href="#">Mon Vip</a>
-									<div class="sample">
-										<img width="150em" height="150em" src="images/sample-2.jpg">
-									</div></li>
-							</ul></li>
-
-						<li><a href="#"><i class="fa fa-list"></i> Theo đối tượng</a>
-							<ul class="list-unstyled level-2 animated zoomIn">
-								<li><a href="#">Mon Vip</a>
-									<div class="sample">
-										<img width="150em" height="150em" src="images/sample-2.jpg">
-									</div></li>
-
-								<li><a href="#">Mon Vip</a>
-									<div class="sample">
-										<img width="150em" height="150em" src="images/sample-2.jpg">
-									</div></li>
-							</ul></li>
-
-						<li><a href="#"><i class="fa fa-list"></i> Theo nguyên liệu</a>
-							<ul class="list-unstyled level-2 animated zoomIn">
-								<li><a href="#">Mon Vip</a>
-									<div class="sample">
-										<img width="150em" height="150em" src="images/sample-2.jpg">
-									</div></li>
-
-								<li><a href="#">Mon Vip</a>
-									<div class="sample">
-										<img width="150em" height="150em" src="images/sample-2.jpg">
-									</div></li>
-							</ul></li>
-
-
+                        @endforeach
 					</ul>
 				</div>
 

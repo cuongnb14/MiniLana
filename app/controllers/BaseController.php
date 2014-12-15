@@ -23,4 +23,13 @@ class BaseController extends Controller {
 	    }
 	    return $categories;
 	}
+	
+	protected function cutString($str, $lenght){
+	     $str = trim($str);
+	     if (strlen($str) <= $lenght) return $str; 
+	     $str = substr($str, 0, $lenght);
+	     $last = strripos($str, " ");
+	     $str = substr($str, 0, $last);
+	    return $str;
+	}
 }

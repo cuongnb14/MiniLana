@@ -16,8 +16,10 @@ class PublicFoodController extends BaseController {
 	      
 	      $data['nameCategory'] = Category::find($idCategory)->name;
 	  }
-	  
 	  $data['foods'] = $data['foods']->all();
+	  foreach ($data['foods'] as $food){
+	      $food->description = $this->cutString($food->description, 100).' ...';
+	  }
 	  return View::make("public.food.list",$data);
 	}
 }
